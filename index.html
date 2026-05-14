@@ -1,17 +1,1436 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NPC Social — Privacy Policy</title>
-    <meta name="description" content="NPC Social Privacy Policy. Learn how we collect, use, store, and protect your information when you use the NPC Social mobile application and related services." />
-    <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NPC Social Privacy Policy. Learn how we collect, use, store, and protect your information when you use the NPC Social mobile application and related services.">
+  <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>NPC Social — Privacy Policy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #62DA3D;
+      --primary-light: #A0E973;
+      --black: #000000;
+      --white: #FFFFFF;
+      --charcoal: #2F4858;
+      --shadow: #0b2923;
+      --grey: #6B7280;
+      --tab: #7E7E7E;
+      --divider: #DFE7EA;
+      --dm-black: #363839;
+      --bg: #F8FAFB;
+      --dark-blue: #0042B3;
+      --lite-blue: #0063FF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+      background: rgba(98, 218, 61, 0.25);
+      color: var(--charcoal);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ══════════════════════════════════════════
+       HEADER
+    ══════════════════════════════════════════ */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.94);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-logo {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .header-text span {
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(98, 218, 61, 0.15);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .header-badge .pulse {
+      width: 6px;
+      height: 6px;
+      background: var(--primary);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--white);
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 55%, var(--shadow) 100%);
+      padding: 64px 20px 80px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background: 
+        radial-gradient(circle at 20% 50%, var(--primary), transparent 50%),
+        radial-gradient(circle at 80% 20%, var(--primary-light), transparent 40%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .hero-tag {
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .hero-tag.green {
+      background: rgba(98, 218, 61, 0.2);
+      color: var(--primary);
+    }
+
+    .hero-tag.white {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--white);
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 6vw, 60px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      max-width: 700px;
+      margin-bottom: 20px;
+    }
+
+    .hero-desc {
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta-item svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    /* ══════════════════════════════════════════
+       MAIN LAYOUT
+    ══════════════════════════════════════════ */
+    .main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    /* ══════════════════════════════════════════
+       SIDEBAR / TOC
+    ══════════════════════════════════════════ */
+    .sidebar {
+      width: 260px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 96px;
+      border-radius: 16px;
+      border: 1px solid var(--divider);
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+    }
+
+    .sidebar-title {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--grey);
+      margin-bottom: 14px;
+    }
+
+    .sidebar-link {
+      display: block;
+      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: 8px;
+      color: var(--grey);
+      font-weight: 400;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .sidebar-link:hover {
+      color: var(--charcoal);
+      background: rgba(0, 0, 0, 0.03);
+      text-decoration: none;
+    }
+
+    .sidebar-link.active {
+      color: var(--primary);
+      background: rgba(98, 218, 61, 0.08);
+      font-weight: 600;
+    }
+
+    /* Mobile drawer */
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+    }
+
+    .mobile-drawer.open {
+      display: flex;
+    }
+
+    .mobile-drawer-overlay {
+      flex: 1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .mobile-drawer-content {
+      width: 280px;
+      background: var(--white);
+      padding: 24px;
+      overflow-y: auto;
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ══════════════════════════════════════════
+       ARTICLE
+    ══════════════════════════════════════════ */
+    .article {
+      flex: 1;
+      min-width: 0;
+      max-width: 760px;
+    }
+
+    /* Intro Card */
+    .intro-card {
+      display: flex;
+      gap: 16px;
+      border-radius: 16px;
+      border: 1px solid var(--divider);
+      background: var(--white);
+      padding: 28px;
+      margin-bottom: 36px;
+    }
+
+    .intro-card-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+
+    .intro-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    /* Sections */
+    .section {
+      scroll-margin-top: 120px;
+      margin-top: 48px;
+    }
+
+    .section:first-of-type {
+      margin-top: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      background: rgba(98, 218, 61, 0.12);
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .subsection {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin: 24px 0 8px;
+    }
+
+    .paragraph {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--grey);
+      margin: 12px 0;
+    }
+
+    /* Bullet Lists */
+    .bullet-list {
+      list-style: none;
+      margin: 14px 0;
+      padding: 0;
+    }
+
+    .bullet-list li {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--grey);
+    }
+
+    .bullet-list .dot {
+      margin-top: 9px;
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    /* Highlight Boxes */
+    .highlight-box {
+      display: flex;
+      gap: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(98, 218, 61, 0.25);
+      background: rgba(98, 218, 61, 0.05);
+      padding: 16px 18px;
+      margin: 16px 0;
+    }
+
+    .highlight-box-icon {
+      font-size: 20px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .highlight-box-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--charcoal);
+    }
+
+    /* Data Table */
+    .data-table-wrapper {
+      overflow-x: auto;
+      margin: 20px 0;
+      border-radius: 12px;
+      border: 1px solid var(--divider);
+    }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    .data-table thead tr {
+      background: var(--charcoal);
+    }
+
+    .data-table th {
+      text-align: left;
+      padding: 12px 18px;
+      color: var(--white);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .data-table tbody tr {
+      border-top: 1px solid var(--divider);
+    }
+
+    .data-table tbody tr:nth-child(odd) {
+      background: var(--white);
+    }
+
+    .data-table tbody tr:nth-child(even) {
+      background: #F9FAFB;
+    }
+
+    .data-table td {
+      padding: 12px 18px;
+    }
+
+    .data-table td:first-child {
+      font-weight: 500;
+      color: var(--charcoal);
+    }
+
+    .data-table td:last-child {
+      color: var(--grey);
+    }
+
+    /* Contact Card */
+    .contact-card {
+      border-radius: 16px;
+      border: 1px solid var(--divider);
+      background: var(--white);
+      padding: 28px;
+      margin: 20px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .contact-item-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--grey);
+      margin-bottom: 4px;
+    }
+
+    .contact-item-value {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    /* Platform Card */
+    .platform-card {
+      border-radius: 16px;
+      padding: 28px;
+      margin-top: 48px;
+      background: linear-gradient(135deg, var(--black), var(--charcoal));
+    }
+
+    .platform-card-inner {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .platform-card-logo {
+      width: 56px;
+      height: 56px;
+      flex-shrink: 0;
+    }
+
+    .platform-card-content {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .platform-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--white);
+      margin: 0 0 4px;
+    }
+
+    .platform-card p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.45);
+      margin: 0 0 14px;
+    }
+
+    .platform-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .platform-tag {
+      border-radius: 20px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 500;
+      background: rgba(98, 218, 61, 0.15);
+      color: var(--primary);
+    }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    .footer {
+      border-top: 1px solid var(--divider);
+      background: var(--white);
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-brand svg {
+      width: 30px;
+      height: 30px;
+    }
+
+    .footer-brand span {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--grey);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--grey);
+    }
+
+    .footer-links .active {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .footer-links .sep {
+      color: var(--divider);
+    }
+
+    .footer-bottom {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--divider);
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      font-size: 12px;
+      color: var(--tab);
+      line-height: 1.7;
+    }
+
+    /* ══════════════════════════════════════════
+       SCROLL TO TOP
+    ══════════════════════════════════════════ */
+    .scroll-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 50;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: none;
+      background: var(--primary);
+      color: var(--black);
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(98, 218, 61, 0.4);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .scroll-top.visible {
+      display: flex;
+    }
+
+    .scroll-top:hover {
+      transform: scale(1.12);
+    }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media (max-width: 960px) {
+      .sidebar {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .main {
+        padding: 32px 20px 48px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .header-badge {
+        display: none;
+      }
+
+      .hero {
+        padding: 48px 20px 64px;
+      }
+
+      .intro-card {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .section-title {
+        font-size: 19px;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       HEADER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <svg class="header-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="120" height="120" rx="26" fill="#000"/>
+          <rect x="4" y="4" width="112" height="112" rx="22" stroke="#62DA3D" stroke-width="3" stroke-opacity="0.3"/>
+          <text x="60" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="38" fill="#62DA3D">NPC</text>
+          <rect x="28" y="80" width="64" height="3" rx="1.5" fill="#62DA3D" fill-opacity="0.5"/>
+        </svg>
+        <div class="header-text">
+          <h1>NPC Social</h1>
+          <span>Privacy Policy</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span class="header-badge">
+          <span class="pulse"></span>
+          Effective May 14, 2026
+        </span>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Table of Contents">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-overlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-drawer-content">
+      <div class="sidebar-title">Contents</div>
+      <a href="#info-collect" class="sidebar-link" onclick="toggleMobileMenu()">1. Information We Collect</a>
+      <a href="#how-use" class="sidebar-link" onclick="toggleMobileMenu()">2. How We Use Your Information</a>
+      <a href="#ugc" class="sidebar-link" onclick="toggleMobileMenu()">3. User Generated Content</a>
+      <a href="#messaging" class="sidebar-link" onclick="toggleMobileMenu()">4. Messaging and Calls</a>
+      <a href="#sharing" class="sidebar-link" onclick="toggleMobileMenu()">5. Sharing of Information</a>
+      <a href="#advertising" class="sidebar-link" onclick="toggleMobileMenu()">6. Advertising and Analytics</a>
+      <a href="#data-retention" class="sidebar-link" onclick="toggleMobileMenu()">7. Data Retention</a>
+      <a href="#data-security" class="sidebar-link" onclick="toggleMobileMenu()">8. Data Security</a>
+      <a href="#user-rights" class="sidebar-link" onclick="toggleMobileMenu()">9. User Controls and Rights</a>
+      <a href="#children" class="sidebar-link" onclick="toggleMobileMenu()">10. Children's Privacy</a>
+      <a href="#third-party" class="sidebar-link" onclick="toggleMobileMenu()">11. Third-Party Services</a>
+      <a href="#international" class="sidebar-link" onclick="toggleMobileMenu()">12. International Data Transfers</a>
+      <a href="#deletion" class="sidebar-link" onclick="toggleMobileMenu()">13. Account Deletion</a>
+      <a href="#california" class="sidebar-link" onclick="toggleMobileMenu()">14. California Privacy Rights</a>
+      <a href="#eea" class="sidebar-link" onclick="toggleMobileMenu()">15. EEA / UK User Rights</a>
+      <a href="#changes" class="sidebar-link" onclick="toggleMobileMenu()">16. Changes to This Policy</a>
+      <a href="#contact" class="sidebar-link" onclick="toggleMobileMenu()">17. Contact Us</a>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-tags">
+        <span class="hero-tag green">Legal Document</span>
+        <span class="hero-tag white">v2.0 — May 2026</span>
+      </div>
+      <h1>Privacy Policy</h1>
+      <p class="hero-desc">
+        At NPC Social, we believe in transparency. This policy explains how we collect, use, store, and protect your information across our multi-algorithm social media platform — including our immersive feeds, messaging, video calls, live streaming, and content discovery features.
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+          Effective: May 14, 2026
+        </span>
+        <span class="hero-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          ~12 min read
+        </span>
+        <span class="hero-meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          App Store Compliant
+        </span>
+      </div>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 60" fill="#F8FAFB">
+      <path d="M0 60h1440V30s-240-30-720-30S0 30 0 30z"/>
+    </svg>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════════════════════════════════════ -->
+  <main class="main">
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <div class="sidebar-title">Table of Contents</div>
+      <a href="#info-collect" class="sidebar-link">1. Information We Collect</a>
+      <a href="#how-use" class="sidebar-link">2. How We Use Your Information</a>
+      <a href="#ugc" class="sidebar-link">3. User Generated Content</a>
+      <a href="#messaging" class="sidebar-link">4. Messaging and Calls</a>
+      <a href="#sharing" class="sidebar-link">5. Sharing of Information</a>
+      <a href="#advertising" class="sidebar-link">6. Advertising and Analytics</a>
+      <a href="#data-retention" class="sidebar-link">7. Data Retention</a>
+      <a href="#data-security" class="sidebar-link">8. Data Security</a>
+      <a href="#user-rights" class="sidebar-link">9. User Controls and Rights</a>
+      <a href="#children" class="sidebar-link">10. Children's Privacy</a>
+      <a href="#third-party" class="sidebar-link">11. Third-Party Services</a>
+      <a href="#international" class="sidebar-link">12. International Data Transfers</a>
+      <a href="#deletion" class="sidebar-link">13. Account Deletion</a>
+      <a href="#california" class="sidebar-link">14. California Privacy Rights</a>
+      <a href="#eea" class="sidebar-link">15. EEA / UK User Rights</a>
+      <a href="#changes" class="sidebar-link">16. Changes to This Policy</a>
+      <a href="#contact" class="sidebar-link">17. Contact Us</a>
+    </nav>
+
+    <!-- Article -->
+    <article class="article">
+
+      <!-- Intro Card -->
+      <div class="intro-card">
+        <span class="intro-card-icon">🛡️</span>
+        <div>
+          <h3>Your Privacy Matters</h3>
+          <p class="paragraph">
+            NPC Social ("<strong>we</strong>," "<strong>our</strong>," or "<strong>us</strong>") is a next-generation social media platform built around immersive content discovery and multi-algorithm experiences. We allow users to seamlessly switch between multiple algorithmic feeds — each tailored to different moods, interests, communities, and social experiences. This Privacy Policy explains how we handle your data across all features, including feed browsing, content uploading, messaging, audio/video calls, live streaming, music discovery, and creator tools.
+          </p>
+          <p class="paragraph">
+            By using NPC Social, you agree to the practices described in this Privacy Policy. If you do not agree with any part of this policy, please discontinue use of the platform.
+          </p>
+        </div>
+      </div>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 1: Information We Collect
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="info-collect">
+        <h2 class="section-title">
+          <span class="section-badge">1</span>
+          Information We Collect
+        </h2>
+        <p class="paragraph">We collect information to provide, personalize, and improve NPC Social's multi-algorithm feed experience, social features, and creator tools. The types of information we collect include:</p>
+
+        <h4 class="subsection">a) Information You Provide Directly</h4>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Name, username, display name, biography, profile photo, and other profile customization details</span></li>
+          <li><span class="dot"></span><span>Email address, phone number, and login credentials (including third-party authentication tokens from Apple, Google, or other sign-in providers)</span></li>
+          <li><span class="dot"></span><span>Photos, videos, stories, comments, captions, hashtags, and any other user-generated content you upload or share</span></li>
+          <li><span class="dot"></span><span>Messages, group chat content, and communication data exchanged through NPC Social's messaging features</span></li>
+          <li><span class="dot"></span><span>Audio/video call initiation data, call duration, and participant information</span></li>
+          <li><span class="dot"></span><span>Preferences for feed customization, dynamic feed icons, and feed theme configurations</span></li>
+          <li><span class="dot"></span><span>Feedback, support requests, and survey responses submitted to us</span></li>
+        </ul>
+
+        <h4 class="subsection">b) Information Collected Automatically</h4>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Device information including model, operating system, OS version, unique device identifiers (e.g., IDFA, IDFV), and hardware specifications</span></li>
+          <li><span class="dot"></span><span>IP address and approximate geographic location derived from your IP (we do not collect precise GPS location unless explicitly authorized)</span></li>
+          <li><span class="dot"></span><span>App usage analytics: which algorithmic feeds you browse, horizontal/vertical swipe patterns, session duration, content interaction data (likes, comments, reposts, saves, shares), and feature engagement metrics</span></li>
+          <li><span class="dot"></span><span>Follower/following activity, friend connections, and social graph data</span></li>
+          <li><span class="dot"></span><span>Search queries, hashtag usage, and trending content interaction data</span></li>
+          <li><span class="dot"></span><span>Crash reports, error logs, diagnostic data, and app performance metrics</span></li>
+          <li><span class="dot"></span><span>Referral sources, install attribution, and advertising identifiers (where permitted)</span></li>
+        </ul>
+
+        <h4 class="subsection">c) Information from Third Parties</h4>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Information received when you sign in via third-party authentication providers (e.g., Apple Sign In, Google Sign In)</span></li>
+          <li><span class="dot"></span><span>Analytics and attribution data from integrated third-party analytics services</span></li>
+          <li><span class="dot"></span><span>Content moderation signals from third-party safety and security providers</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 2: How We Use Your Information
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="how-use">
+        <h2 class="section-title">
+          <span class="section-badge">2</span>
+          How We Use Your Information
+        </h2>
+        <p class="paragraph">Your information is used to power NPC Social's core features and deliver a personalized, multi-algorithm social experience. Specifically, we use your information to:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Create, authenticate, and manage your user account and profile</span></li>
+          <li><span class="dot"></span><span>Deliver and personalize multiple algorithmic content feeds tailored to your interests, mood, community engagement, and social connections</span></li>
+          <li><span class="dot"></span><span>Power the <strong>Friends Algorithm</strong> feed to surface content from people you follow and interact with most</span></li>
+          <li><span class="dot"></span><span>Enable content uploading, sharing, and discovery — including short-form videos, photos, stories, live streams, and music-related content</span></li>
+          <li><span class="dot"></span><span>Facilitate real-time one-to-one and group messaging, audio calls, and video calls</span></li>
+          <li><span class="dot"></span><span>Provide search, hashtag discovery, trending creators, and trending video recommendations</span></li>
+          <li><span class="dot"></span><span>Operate and improve our music discovery section, including artist, track, and playlist recommendations</span></li>
+          <li><span class="dot"></span><span>Enable live streaming features and creator engagement tools</span></li>
+          <li><span class="dot"></span><span>Detect, prevent, and address fraud, abuse, spam, harassment, illegal activity, and violations of our Community Guidelines and Terms of Service</span></li>
+          <li><span class="dot"></span><span>Send push notifications, in-app messages, and email communications about account activity, security alerts, feature updates, and (where opted in) promotional content</span></li>
+          <li><span class="dot"></span><span>Analyze platform trends, usage patterns, and performance to improve app functionality, UI/UX, and scalability</span></li>
+          <li><span class="dot"></span><span>Provide customer support and respond to user inquiries</span></li>
+          <li><span class="dot"></span><span>Comply with legal obligations and enforce our terms</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 3: User Generated Content
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="ugc">
+        <h2 class="section-title">
+          <span class="section-badge">3</span>
+          User Generated Content
+        </h2>
+        <p class="paragraph">NPC Social is built around user-generated content. Our platform enables users to upload and share videos, photos, stories, comments, messages, captions, hashtags, and other creative content.</p>
+
+        <div class="highlight-box">
+          <span class="highlight-box-icon">📢</span>
+          <div class="highlight-box-text">
+            <strong>Public Content:</strong> Content you share publicly (e.g., videos posted to your profile, comments on public posts, live streams) may be visible to all NPC Social users and, depending on your settings, may be discoverable through search, hashtags, trending sections, and algorithmic feeds. Public content may also be indexed by external search engines.
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <span class="highlight-box-icon">🔒</span>
+          <div class="highlight-box-text">
+            <strong>Private Content:</strong> Content shared through direct messages or private group chats is only visible to the intended recipients. We do not use private message content to train recommendation algorithms or serve advertisements.
+          </div>
+        </div>
+
+        <p class="paragraph">You are solely responsible for the content you upload and share. All content must comply with applicable laws, our Community Guidelines, and our Terms of Service. We reserve the right to remove content that violates our policies and to suspend or terminate accounts engaged in repeated or severe violations.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 4: Messaging and Calls
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="messaging">
+        <h2 class="section-title">
+          <span class="section-badge">4</span>
+          Messaging and Calls
+        </h2>
+        <p class="paragraph">NPC Social includes real-time messaging, audio calling, and video calling features designed to keep you connected with friends and communities.</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>One-to-one and group text messaging with support for media sharing (photos, videos, links)</span></li>
+          <li><span class="dot"></span><span>Audio and video calling between NPC Social users</span></li>
+          <li><span class="dot"></span><span>Communications are processed through secure third-party infrastructure providers that meet industry-standard security requirements</span></li>
+          <li><span class="dot"></span><span>We collect call metadata (e.g., call initiation time, duration, participants) for service operation, quality monitoring, and abuse prevention — <strong>not</strong> call content</span></li>
+        </ul>
+
+        <div class="highlight-box">
+          <span class="highlight-box-icon">🚫</span>
+          <div class="highlight-box-text">
+            <strong>We do not sell private messages, call recordings, or communication content to advertisers or any third party.</strong> Private communications are never used for advertising targeting purposes.
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 5: Sharing of Information
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="sharing">
+        <h2 class="section-title">
+          <span class="section-badge">5</span>
+          Sharing of Information
+        </h2>
+        <p class="paragraph">We do not sell your personal data. We may share limited information with the following categories of recipients only as necessary to operate and improve the platform:</p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Recipient Category</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cloud Hosting & Infrastructure</td>
+                <td>Secure data storage, content delivery, and platform operations (e.g., AWS, Google Cloud, Firebase)</td>
+              </tr>
+              <tr>
+                <td>Analytics & Performance</td>
+                <td>App usage analysis, crash reporting, and performance monitoring (e.g., Firebase Analytics, Crashlytics)</td>
+              </tr>
+              <tr>
+                <td>Content Moderation & Safety</td>
+                <td>Automated and human review of content for policy violations, CSAM detection, and spam prevention</td>
+              </tr>
+              <tr>
+                <td>Authentication Providers</td>
+                <td>Secure user sign-in via Apple, Google, or other third-party identity providers</td>
+              </tr>
+              <tr>
+                <td>Push Notification Services</td>
+                <td>Delivery of real-time notifications (e.g., APNs, FCM)</td>
+              </tr>
+              <tr>
+                <td>Advertising Partners</td>
+                <td>Delivery of ads and sponsored content (limited to non-personal or aggregated data where applicable)</td>
+              </tr>
+              <tr>
+                <td>Law Enforcement & Legal</td>
+                <td>Compliance with valid legal process, court orders, or governmental requests as required by law</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight-box">
+          <span class="highlight-box-icon">✅</span>
+          <div class="highlight-box-text">
+            <strong>We do not sell personal user data to third parties.</strong> We may share anonymized, aggregated, or de-identified data that cannot reasonably be used to identify you.
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 6: Advertising and Analytics
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="advertising">
+        <h2 class="section-title">
+          <span class="section-badge">6</span>
+          Advertising and Analytics
+        </h2>
+        <p class="paragraph">NPC Social may display advertisements and sponsored content within the app. Advertising supports the free operation of our platform and creator economy features.</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Ads may be personalized based on your in-app activity, content preferences, feed browsing behavior, and engagement patterns</span></li>
+          <li><span class="dot"></span><span>We may use Apple's SKAdNetwork or similar privacy-preserving attribution frameworks for ad measurement</span></li>
+          <li><span class="dot"></span><span>We do <strong>not</strong> use private message content, audio/video call content, or precise location data for advertising targeting</span></li>
+          <li><span class="dot"></span><span>You may limit ad personalization through your device settings (e.g., iOS Settings → Privacy & Security → Tracking)</span></li>
+          <li><span class="dot"></span><span>We use analytics services (e.g., Firebase Analytics, Mixpanel) to understand user engagement, measure feature adoption, and improve platform performance</span></li>
+          <li><span class="dot"></span><span>Analytics data is collected in aggregate form where possible to minimize individual identification</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 7: Data Retention
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="data-retention">
+        <h2 class="section-title">
+          <span class="section-badge">7</span>
+          Data Retention
+        </h2>
+        <p class="paragraph">We retain your personal information for as long as your account is active or as necessary to provide our services. Specific retention periods include:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span><strong>Account information:</strong> retained for the duration of your active account plus a reasonable period after deletion to allow for account recovery and comply with legal obligations</span></li>
+          <li><span class="dot"></span><span><strong>User-generated content:</strong> retained until deleted by you or until account deletion is processed</span></li>
+          <li><span class="dot"></span><span><strong>Messages and call metadata:</strong> retained for the duration of your account unless individually deleted</span></li>
+          <li><span class="dot"></span><span><strong>Analytics and log data:</strong> typically retained in identifiable form for up to 24 months, then anonymized or deleted</span></li>
+          <li><span class="dot"></span><span><strong>Legal compliance data:</strong> retained as required by applicable law, regulation, or legal process</span></li>
+        </ul>
+        <p class="paragraph">After account deletion is processed, we will delete or anonymize your personal data within <strong>90 days</strong>, except where retention is required by law or for legitimate business purposes (e.g., fraud prevention, legal claims).</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 8: Data Security
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="data-security">
+        <h2 class="section-title">
+          <span class="section-badge">8</span>
+          Data Security
+        </h2>
+        <p class="paragraph">We implement reasonable and appropriate technical and organizational security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Encryption of data in transit using TLS/SSL protocols</span></li>
+          <li><span class="dot"></span><span>Encryption of sensitive data at rest</span></li>
+          <li><span class="dot"></span><span>Secure authentication mechanisms including support for multi-factor authentication</span></li>
+          <li><span class="dot"></span><span>Regular security assessments, vulnerability testing, and code reviews</span></li>
+          <li><span class="dot"></span><span>Access controls limiting employee access to personal data on a need-to-know basis</span></li>
+          <li><span class="dot"></span><span>Incident response procedures for identifying and addressing security breaches</span></li>
+        </ul>
+
+        <div class="highlight-box">
+          <span class="highlight-box-icon">⚠️</span>
+          <div class="highlight-box-text">
+            <strong>No Absolute Guarantee:</strong> While we strive to protect your information, no method of electronic transmission or storage is 100% secure. We cannot guarantee absolute security of your data. You are responsible for maintaining the confidentiality of your account credentials.
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 9: User Controls and Rights
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="user-rights">
+        <h2 class="section-title">
+          <span class="section-badge">9</span>
+          User Controls and Rights
+        </h2>
+        <p class="paragraph">NPC Social provides you with meaningful control over your personal information. You may exercise the following rights at any time:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Edit or update your profile information, display name, username, bio, and profile photo</span></li>
+          <li><span class="dot"></span><span>Customize your algorithmic feed preferences, dynamic feed icons, and feed themes</span></li>
+          <li><span class="dot"></span><span>Delete individual pieces of uploaded content (videos, photos, stories, comments)</span></li>
+          <li><span class="dot"></span><span>Block, mute, restrict, or report other users</span></li>
+          <li><span class="dot"></span><span>Manage notification preferences and communication settings</span></li>
+          <li><span class="dot"></span><span>Control who can message you, view your content, or interact with your profile</span></li>
+          <li><span class="dot"></span><span>Download a copy of your personal data (data portability)</span></li>
+          <li><span class="dot"></span><span>Request complete deletion of your account and associated personal data</span></li>
+          <li><span class="dot"></span><span>Opt out of personalized advertising through your device privacy settings</span></li>
+          <li><span class="dot"></span><span>Withdraw consent for optional data processing activities at any time</span></li>
+        </ul>
+        <p class="paragraph">To exercise any of these rights, you may use the in-app settings or contact us at <a href="mailto:Greyson.Penn@gmail.com">Greyson.Penn@gmail.com</a>. We will respond to valid requests within the timeframe required by applicable law.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 10: Children's Privacy
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="children">
+        <h2 class="section-title">
+          <span class="section-badge">10</span>
+          Children's Privacy
+        </h2>
+        <p class="paragraph">NPC Social is <strong>not intended for children under the age of 13</strong> (or the minimum age required by applicable law in your jurisdiction, such as 16 in the EEA under GDPR).</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>We do not knowingly collect personal information from children below the applicable minimum age without verifiable parental or guardian consent</span></li>
+          <li><span class="dot"></span><span>If we discover that we have collected personal information from a child without appropriate consent, we will take prompt steps to delete that information</span></li>
+          <li><span class="dot"></span><span>If you believe a child under the applicable minimum age is using NPC Social, please contact us immediately so we can investigate and take appropriate action</span></li>
+          <li><span class="dot"></span><span>We employ age-gating mechanisms during account registration to help prevent underage users from creating accounts</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 11: Third-Party Services
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="third-party">
+        <h2 class="section-title">
+          <span class="section-badge">11</span>
+          Third-Party Services
+        </h2>
+        <p class="paragraph">NPC Social integrates with third-party services to power various platform features. These integrations may include:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>Cloud storage and content delivery networks for hosting user-generated content</span></li>
+          <li><span class="dot"></span><span>Push notification delivery services (Apple Push Notification Service, Firebase Cloud Messaging)</span></li>
+          <li><span class="dot"></span><span>Authentication providers (Apple Sign In, Google Sign In) for secure account access</span></li>
+          <li><span class="dot"></span><span>Analytics and crash reporting tools for app performance monitoring</span></li>
+          <li><span class="dot"></span><span>Content moderation and safety APIs for policy enforcement</span></li>
+          <li><span class="dot"></span><span>Media processing services for video transcoding, thumbnail generation, and image optimization</span></li>
+          <li><span class="dot"></span><span>Music licensing and streaming services integrated into the music discovery section</span></li>
+          <li><span class="dot"></span><span>Payment processing services for creator monetization features (where applicable)</span></li>
+        </ul>
+        <p class="paragraph">These third-party services may collect and process data according to their own privacy policies, which we encourage you to review. We select third-party partners that demonstrate adequate data protection practices, but we are not responsible for their privacy practices.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 12: International Data Transfers
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="international">
+        <h2 class="section-title">
+          <span class="section-badge">12</span>
+          International Data Transfers
+        </h2>
+        <p class="paragraph">NPC Social operates globally, and your information may be transferred to and processed in countries other than your country of residence, including the United States. These countries may have data protection laws that differ from your jurisdiction.</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>We implement appropriate safeguards for international data transfers, including Standard Contractual Clauses (SCCs) approved by the European Commission where applicable</span></li>
+          <li><span class="dot"></span><span>We ensure that our third-party service providers maintain adequate data protection measures regardless of where data is processed</span></li>
+          <li><span class="dot"></span><span>By using NPC Social, you acknowledge and consent to the transfer of your information to jurisdictions outside your country of residence</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 13: Account Deletion
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="deletion">
+        <h2 class="section-title">
+          <span class="section-badge">13</span>
+          Account Deletion
+        </h2>
+        <p class="paragraph">You may request deletion of your NPC Social account and all associated personal data at any time through the following methods:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span><strong>In-App:</strong> Navigate to <strong>Settings → Account → Delete Account</strong> and follow the on-screen instructions</span></li>
+          <li><span class="dot"></span><span><strong>Email:</strong> Send a deletion request to <a href="mailto:Greyson.Penn@gmail.com">Greyson.Penn@gmail.com</a> from the email address associated with your account</span></li>
+        </ul>
+        <p class="paragraph">Upon receiving a valid deletion request:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>We will verify your identity to prevent unauthorized account deletion</span></li>
+          <li><span class="dot"></span><span>Your account will be deactivated immediately and scheduled for permanent deletion</span></li>
+          <li><span class="dot"></span><span>A grace period of up to <strong>30 days</strong> is provided during which you may cancel the deletion and restore your account</span></li>
+          <li><span class="dot"></span><span>After the grace period, your personal data will be permanently deleted within <strong>90 days</strong>, except where retention is required by law</span></li>
+          <li><span class="dot"></span><span>Content you shared publicly that was reposted, shared, or downloaded by other users prior to deletion may remain accessible</span></li>
+          <li><span class="dot"></span><span>Anonymized or aggregated data derived from your usage may be retained for analytics and platform improvement purposes</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 14: California Privacy Rights
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="california">
+        <h2 class="section-title">
+          <span class="section-badge">14</span>
+          California Privacy Rights (CCPA/CPRA)
+        </h2>
+        <p class="paragraph">If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA):</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span><strong>Right to Know:</strong> You may request details about the categories and specific pieces of personal information we have collected about you</span></li>
+          <li><span class="dot"></span><span><strong>Right to Delete:</strong> You may request deletion of your personal information, subject to certain exceptions</span></li>
+          <li><span class="dot"></span><span><strong>Right to Correct:</strong> You may request correction of inaccurate personal information</span></li>
+          <li><span class="dot"></span><span><strong>Right to Opt-Out of Sale/Sharing:</strong> We do not sell your personal information. If this changes, we will provide a clear opt-out mechanism</span></li>
+          <li><span class="dot"></span><span><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your privacy rights</span></li>
+          <li><span class="dot"></span><span><strong>Right to Limit Use of Sensitive Personal Information:</strong> Where applicable, you may limit how we use sensitive personal information</span></li>
+        </ul>
+        <p class="paragraph">To exercise these rights, contact us at <a href="mailto:Greyson.Penn@gmail.com">Greyson.Penn@gmail.com</a>. We will verify your identity and respond within <strong>45 days</strong> as required by law.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 15: EEA / UK User Rights
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="eea">
+        <h2 class="section-title">
+          <span class="section-badge">15</span>
+          EEA / UK User Rights (GDPR)
+        </h2>
+        <p class="paragraph">If you are located in the European Economic Area (EEA) or United Kingdom (UK), you have additional rights under the General Data Protection Regulation (GDPR) and UK GDPR:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span><strong>Right of Access:</strong> Request a copy of your personal data</span></li>
+          <li><span class="dot"></span><span><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete personal data</span></li>
+          <li><span class="dot"></span><span><strong>Right to Erasure:</strong> Request deletion of your personal data under certain circumstances</span></li>
+          <li><span class="dot"></span><span><strong>Right to Restriction of Processing:</strong> Request that we limit how we process your data</span></li>
+          <li><span class="dot"></span><span><strong>Right to Data Portability:</strong> Receive your data in a structured, machine-readable format</span></li>
+          <li><span class="dot"></span><span><strong>Right to Object:</strong> Object to processing based on legitimate interests, including profiling for personalized content recommendations</span></li>
+          <li><span class="dot"></span><span><strong>Rights Related to Automated Decision-Making:</strong> Request human review of decisions made solely through automated processing that significantly affect you</span></li>
+        </ul>
+        <p class="paragraph">Our legal bases for processing your personal data include: performance of our contract with you (Terms of Service), your consent, our legitimate interests (platform improvement, security, fraud prevention), and compliance with legal obligations.</p>
+        <p class="paragraph">You may also lodge a complaint with your local data protection supervisory authority.</p>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 16: Changes to This Policy
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="changes">
+        <h2 class="section-title">
+          <span class="section-badge">16</span>
+          Changes to This Policy
+        </h2>
+        <p class="paragraph">We may update this Privacy Policy from time to time to reflect changes in our practices, legal requirements, or platform features. When we make changes:</p>
+        <ul class="bullet-list">
+          <li><span class="dot"></span><span>We will update the "Effective Date" at the top of this policy</span></li>
+          <li><span class="dot"></span><span>For material changes, we will provide notice through the app (e.g., in-app notification, banner) and/or via email to the address associated with your account</span></li>
+          <li><span class="dot"></span><span>Continued use of NPC Social after the updated policy takes effect constitutes your acceptance of the revised terms</span></li>
+          <li><span class="dot"></span><span>If you do not agree with any changes, you should discontinue use of the platform and request account deletion</span></li>
+        </ul>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════════════
+           SECTION 17: Contact Us
+      ═══════════════════════════════════════════════════════════════ -->
+      <section class="section" id="contact">
+        <h2 class="section-title">
+          <span class="section-badge">17</span>
+          Contact Us
+        </h2>
+        <p class="paragraph">If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+
+        <div class="contact-card">
+          <div class="contact-grid">
+            <div>
+              <div class="contact-item-label">Company</div>
+              <div class="contact-item-value">NPC Social</div>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:Greyson.Penn@gmail.com">Greyson.Penn@gmail.com</a></div>
+            </div>
+            <div>
+              <div class="contact-item-label">Response Time</div>
+              <div class="contact-item-value">Within 30 days of receipt</div>
+            </div>
+            <div>
+              <div class="contact-item-label">Subject Line</div>
+              <div class="contact-item-value">"Privacy Policy Inquiry"</div>
+            </div>
+          </div>
+        </div>
+
+        <p class="paragraph">For data protection inquiries from EEA/UK residents, please include <strong>"GDPR Request"</strong> in your email subject line to ensure timely processing.</p>
+      </section>
+
+      <!-- Platform Card -->
+      <div class="platform-card">
+        <div class="platform-card-inner">
+          <svg class="platform-card-logo" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" rx="26" fill="#000"/>
+            <rect x="4" y="4" width="112" height="112" rx="22" stroke="#62DA3D" stroke-width="3" stroke-opacity="0.3"/>
+            <text x="60" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="38" fill="#62DA3D">NPC</text>
+            <rect x="28" y="80" width="64" height="3" rx="1.5" fill="#62DA3D" fill-opacity="0.5"/>
+          </svg>
+          <div class="platform-card-content">
+            <h3>NPC Social</h3>
+            <p>Next-Generation Multi-Algorithm Social Platform</p>
+            <div class="platform-tags">
+              <span class="platform-tag">Multi-Feed Discovery</span>
+              <span class="platform-tag">Short-Form Video</span>
+              <span class="platform-tag">Live Streaming</span>
+              <span class="platform-tag">Messaging & Calls</span>
+              <span class="platform-tag">Music Discovery</span>
+              <span class="platform-tag">Creator Tools</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" rx="26" fill="#000"/>
+            <rect x="4" y="4" width="112" height="112" rx="22" stroke="#62DA3D" stroke-width="3" stroke-opacity="0.3"/>
+            <text x="60" y="68" text-anchor="middle" font-family="Inter,sans-serif" font-weight="900" font-size="38" fill="#62DA3D">NPC</text>
+            <rect x="28" y="80" width="64" height="3" rx="1.5" fill="#62DA3D" fill-opacity="0.5"/>
+          </svg>
+          <span>NPC Social</span>
+        </div>
+        <p class="footer-copy">© 2026 NPC Social. All rights reserved.</p>
+        <div class="footer-links">
+          <span class="active">Privacy Policy</span>
+          <span class="sep">|</span>
+          <span>Terms of Service</span>
+          <span class="sep">|</span>
+          <span>Community Guidelines</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>This privacy policy is provided for informational and compliance purposes. NPC Social is committed to protecting user privacy in accordance with applicable data protection laws including GDPR, CCPA/CPRA, and Apple App Store Review Guidelines.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════════════════════════════════ -->
+  <script>
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('open');
+    }
+
+    // Scroll to Top
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show/Hide Scroll Button + Active TOC Link
+    document.addEventListener('DOMContentLoaded', function() {
+      const scrollBtn = document.getElementById('scrollTop');
+      const sections = document.querySelectorAll('.section');
+      const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+      // Scroll listener
+      window.addEventListener('scroll', function() {
+        // Show/hide scroll button
+        if (window.scrollY > 500) {
+          scrollBtn.classList.add('visible');
+        } else {
+          scrollBtn.classList.remove('visible');
+        }
+
+        // Highlight active TOC link
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 150;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        sidebarLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
 </html>
